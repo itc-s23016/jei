@@ -1,3 +1,7 @@
+// s23016
+// ポリモフィズムの課題
+
+// スーパークラスAnimalの定義
 class Animal {
 	public void makeSound() {
 		System.out.println("動物の音");
@@ -7,12 +11,14 @@ class Animal {
 	}
 }
 
+// 継承したサブクラスDogの定義
 class Dog extends Animal {
 	public void makeSound() {
 		System.out.println("ワンワン");
 	}
 }
 
+// 追記した課題「ニャー」
 class Cat extends Animal {
 	public void makeSound() {
 		System.out.println("ニャー");
@@ -22,9 +28,9 @@ class Cat extends Animal {
 public class d48Q2kadai {
 	public static void main(String[] args) {
 		Animal a = new Dog();
+		Animal b = new Cat();
 		a.makeSound();
 		a.test();
-		Animal b = new Cat();
 		b.makeSound();
 	}
 }
