@@ -17,11 +17,12 @@ class d48Q6kadai {
 		match.setAchievements(teamA, teamB);
 		System.out.println(match.showResult());
 
-		if(match.winpoint(teamA.point, teamB.point, teamA.tryNumber) > match.winpoint(teamB.point, teamA.point, teamB.tryNumber)) {
+		if(match.winpoint(teamA.point, teamB.point, teamA.tryNumber) == match.winpoint(teamB.point, teamA.point, teamB.tryNumber)) {
+			System.out.println("引き分け！");
+		} else if (match.winpoint(teamA.point, teamB.point, teamA.tryNumber) > match.winpoint(teamB.point, teamA.point, teamB.tryNumber)) {
 			System.out.println("チームAの勝利！");
 		} else
 			System.out.println("チームBの勝利！");
-
 	}
 }
 
